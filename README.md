@@ -7,6 +7,4 @@
   - Файлы, содержащие в названии `.tfstate.`, `_override.tf` и `_override.tf.json`;
   - Конкретные файлы, а именно: `crash.log`, `override.tf`, `override.tf.json`, `.terraformrc` и `terraform.rc`;
   - Скрытые каталоги `.terraform` на любом уровне вложенности, начиная с каталога, в котором создан вышеупамянутый файл `.gitignire`.
-
-
-***
+  
