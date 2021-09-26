@@ -1,4 +1,4 @@
-# devops-netology
+# devops-netology (devops-13 Алексей Храпов)
 ## Домашнее задание к занятию «2.1. Системы контроля версий.»
 ### Задание 1
 Добавлен каталог `terraform`, в созданном каталоге добавлен файл `.gitignore` с содержанием, предложенным в примере, доступном по [ссылке](https://github.com/github/gitignore/blob/master/Terraform.gitignore).
