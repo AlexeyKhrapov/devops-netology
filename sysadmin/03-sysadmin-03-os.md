@@ -5,15 +5,15 @@
 В предложенном варианте `cd` делает следующий вызов: `chdir("/tmp")`
 
 > 2. Попробуйте использовать команду `file` на объекты разных типов на файловой системе. Например:
-    ```bash
-    vagrant@netology1:~$ file /dev/tty
-    /dev/tty: character special (5/0)
-    vagrant@netology1:~$ file /dev/sda
-    /dev/sda: block special (8/0)
-    vagrant@netology1:~$ file /bin/bash
-    /bin/bash: ELF 64-bit LSB shared object, x86-64
-    ```
-    Используя `strace` выясните, где находится база данных `file` на основании которой она делает свои догадки.
+> ```bash
+> vagrant@netology1:~$ file /dev/tty
+> /dev/tty: character special (5/0)
+> vagrant@netology1:~$ file /dev/sda
+> /dev/sda: block special (8/0)
+> vagrant@netology1:~$ file /bin/bash
+> /bin/bash: ELF 64-bit LSB shared object, x86-64
+> ```
+> Используя `strace` выясните, где находится база данных `file` на основании которой она делает свои догадки.
 
 Исходя из вывода `strace file` (`openat(AT_FDCWD, "/usr/share/misc/magic.mgc", O_RDONLY) = 3`) база данных `file` расположена по следующему пути: `/usr/share/misc/magic.mgc`
 
