@@ -41,7 +41,7 @@ Password:
 vagrant@vagrant:~$ ps -e | grep node_exporter
    1343 ?        00:00:00 node_exporter
 ```
-Проверка добавления опций:
+Проверка добавления опций (systemd должен подгружать переменные окружения при старте node_exporter из файла /etc/default/node_exporter):
 ```bash
 root@vagrant:~# cat /etc/default/node_exporter
 TestVariable="Hello, I'm here!"
@@ -53,6 +53,8 @@ INVOCATION_ID=ff983afccca04fd58d3a4f411dd54e4f
 JOURNAL_STREAM=9:26291
 TestVariable=Hello, I'm here!
 ```
+Как видно из вывода, переменная `TestVariable` и её значение, прописанные в файле `/etc/default/node_exporter`, были переданы, что соответствует конфигурации, указанной в `unit-файле`.
+
 Отображение в браузере:
 ![Отображение в браузере](img/node_exporter.png)
 
