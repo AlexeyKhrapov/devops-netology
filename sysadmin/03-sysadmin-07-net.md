@@ -154,8 +154,22 @@ u32 match ip protocol 1 0xff flowid 1:1 \
 match ip src 10.0.0.2 flowid 1:1 \
 action vlan push id 123
 ```
-
-Пример конфигурации vlan с бриджом на 2 интерфейса:
+Пример создания vlan 3 на интерфейсе eth0:
+```bash
+vagrant@vagrant:~$ sudo ip link add link eth0 name eth0.3 type vlan id 3
+vagrant@vagrant:~$ ip addr add 10.0.3.200/24 brd 10.0.3.255 dev eth0.3
+RTNETLINK answers: Operation not permitted
+vagrant@vagrant:~$ sudo ip addr add 10.0.3.200/24 brd 10.0.3.255 dev eth0.3
+vagrant@vagrant:~$ sudo ip link set dev eth0.3 up
+vagrant@vagrant:~$ ip -c link
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 08:00:27:73:60:cf brd ff:ff:ff:ff:ff:ff
+3: eth0.3@eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000
+    link/ether 08:00:27:73:60:cf brd ff:ff:ff:ff:ff:ff
+```
+Пример конфигурации vlan с бриджом на 2 интерфейса, созданные путем редактирования файла `/etc/network/interfaces` в Debian:
 ```bash
 # VLAN3
 auto enp65s0f0.3
