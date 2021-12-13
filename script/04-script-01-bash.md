@@ -54,7 +54,7 @@ while (( 1 == 1 ))
 ```bash
 admin@LP-AHR:/mnt/c/Users/ahr$ cat check_hosts_http.sh
 #!/usr/bin/env bash
-hosts=(192.168.0.1 173.194.222.113 87.250.250.24)
+hosts=(192.168.0.1 173.194.222.113 87.250.250.242)
 timeout=5
 for i in {1..5}
 do
@@ -74,7 +74,7 @@ done
 ```bash
 admin@LP-AHR:/mnt/c/Users/ahr$ cat check_hosts_http_u.sh
 #!/usr/bin/env bash
-hosts=(192.168.0.1 173.194.222.113 87.250.250.24)
+hosts=(192.168.0.1 173.194.222.113 87.250.250.242)
 timeout=5
 stat=0
 
