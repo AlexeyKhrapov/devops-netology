@@ -109,7 +109,7 @@ while True:
 ```
 
 ### Вывод скрипта при запуске при тестировании:
-```
+```bash
 admin@LP-AHR:/mnt/c/Users/ahr/studing/devops-netology/script/scripts$ ./04-03_2.py
 *** start script ***
 {'drive.google.com': '0.0.0.0', 'mail.google.com': '0.0.0.0', 'google.com': '0.0.0.0'}
