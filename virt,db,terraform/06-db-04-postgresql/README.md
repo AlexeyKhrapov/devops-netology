@@ -189,4 +189,11 @@ INSERT 0 8
 root@f1c1f82f2810:/# pg_dump -U postgres -d test_database >test_database_dump.sql
 ```
 Чтобы добавить уникальности значению столбца `title` таблиц `test_database`, 
-можно, например, создать индекс: `CREATE INDEX ON orders ((lower(title)));`.
+можно, например, добавить первичный ключ или создать индекс: `CREATE INDEX ON orders ((lower(title)));`.
+Также можно добавить ограничение уникальности: 
+```bash
+ALTER TABLE ONLY orders_1 ADD UNIQUE (title);
+ALTER TABLE ONLY orders_2 ADD UNIQUE (title);
+```
+Для обеспечения полной уникальности столбца `title` стоило бы установить ограничения до шардирования.
+Во всяком случае мне не удалось реализовать это ограничение только по одному столбцу после разбиения.
