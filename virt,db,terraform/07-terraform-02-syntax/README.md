@@ -97,3 +97,8 @@ Packer
 
 > 2. Ссылку на репозиторий с исходной конфигурацией терраформа.
 
+`terraform plan` проходит без ошибок (после `terraform apply` создается всё в соответствии с конфигурацией)
+![screenshot](./src/tf-plan.png)
+
+Репозиторий доступен по [ссылке](https://github.com/AlexeyKhrapov/devops-netology/tree/main/terraform/07-terraform-02-syntax).
+
