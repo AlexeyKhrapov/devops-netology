@@ -34,3 +34,4 @@ override.tf.json
 terraform.rc
 **/key.json
 *.lock.hcl
+./07-terraform-03-basic/versions.tf
