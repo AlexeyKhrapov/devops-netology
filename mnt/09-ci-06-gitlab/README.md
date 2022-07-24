@@ -13,7 +13,7 @@
 6. Точка вызова: запуск скрипта
 7. Если сборка происходит на ветке `master`: должен подняться pod kubernetes на основе образа `python-api`, иначе этот шаг нужно пропустить
 
-### Ответ:
+### **Ответ:**
 
 - [.gitlab-ci.yml](./src/files/task1/gitlab-ci.yml)
 - [k8s.yaml](./src/files/task1/k8s.yaml)
@@ -54,7 +54,7 @@ kad@lp-kad:~$ kubectl logs deployment/python-api-deployment -n python-api
 2. Текст с `{ "message": "Already started" }` на `{ "message": "Running"}`
 3. Issue поставить label: feature
 
-### Ответ:
+### **Ответ:**
 
 - [python-api.py](./src/files/task2/python-api.py)
 
@@ -73,7 +73,7 @@ kad@lp-kad:~$ kubectl logs deployment/python-api-deployment -n python-api
 2. Внести изменения по тексту из задания
 3. Подготовить Merge Requst, влить необходимые изменения в `master`, проверить, что сборка прошла успешно
 
-### Ответ:
+### **Ответ:**
 
 <details><summary>Merge Request с успешной сборкой</summary>
 
@@ -89,7 +89,7 @@ kad@lp-kad:~$ kubectl logs deployment/python-api-deployment -n python-api
 1. Поднять докер-контейнер с образом `python-api:latest` и проверить возврат метода на корректность
 2. Закрыть Issue с комментарием об успешности прохождения, указав желаемый результат и фактически достигнутый
 
-### Ответ:
+### **Ответ:**
 
 Проверка:
 ```bash
@@ -120,6 +120,10 @@ kad@gitlab:~$ curl http://10.1.127.19:5290/get_info
 
 После успешного прохождения всех ролей - отправьте ссылку на ваш проект в гитлаб, как решение домашнего задания
 
-http://51.250.71.37/AlexKhrapov/09-ci-06-gitlab
+### **Ответ:**
+
+Кластер Kubernetes остановлен. Проект на GitLab доступен по ссылке:
+
+- http://51.250.71.37/AlexKhrapov/09-ci-06-gitlab
 
 
